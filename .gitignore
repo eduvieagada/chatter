@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+/packages
+.idea
+/chatter/bin

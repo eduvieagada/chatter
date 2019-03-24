@@ -34,3 +34,10 @@
 /packages
 .idea
 /chatter/bin
+/Chatter.Tests/obj/Debug
+/Chatter.Tests/Chatter.Presentation/obj/Debug
+/Chatter.Tests/bin/Debug
+/Chatter.Logic/obj/Debug
+/Chatter.Data/obj/Debug
+/Chatter/obj/Debug
+/.vs

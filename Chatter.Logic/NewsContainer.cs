@@ -9,6 +9,6 @@ namespace Chatter.Logic
 {
     public interface INewsContainer
     {
-       IEnumerable<INewsItem> GetLatestNews();
+       List<INewsItem> GetLatestNews();
     }
 }

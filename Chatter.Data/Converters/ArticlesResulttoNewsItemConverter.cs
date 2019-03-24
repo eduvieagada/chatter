@@ -1,11 +1,6 @@
-﻿using Chatter.Data.Models;
+﻿using Chatter.Data.Manual.Models;
+using Chatter.Data.Models;
 using Chatter.Logic.Models;
-using NewsAPI.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Chatter.Data.Converters
 {
@@ -15,13 +10,13 @@ namespace Chatter.Data.Converters
         {
             return new NewsItem
             {
-                Author = article.Author,
-                SourceName = article.Source.Name,
-                DatePublished = article.PublishedAt,
-                Description = article.Description,
-                ImageUrl = article.UrlToImage,
-                Url = article.Url,
-                Title = article.Title
+                Author = article.author,
+                SourceName = article.source.name,
+                DatePublished = article.publishedAt,
+                Description = article.description,
+                ImageUrl = article.urlToImage,
+                Url = article.url,
+                Title = article.title
             };
         }
     }

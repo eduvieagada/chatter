@@ -2,6 +2,7 @@
 using Autofac.Integration.WebApi;
 using Chatter.Data;
 using Chatter.Logic;
+using System.Configuration;
 using System.Reflection;
 using System.Web.Http;
 
@@ -25,12 +26,22 @@ namespace Chatter.App_Start
         {
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-            builder.RegisterType<INewsContainer>().As<NewsContainer>().InstancePerRequest();
-            builder.RegisterType<ILoggging>().As<Logging>().InstancePerRequest();
+            builder.RegisterType<NewsContainer>().As<INewsContainer>()
+                .InstancePerRequest()
+                .WithParameter(new TypedParameter(typeof(string), ConfigurationManager.AppSettings.Get("ApiKey")));
+            builder.RegisterType<Logging>().As<ILoggging>().InstancePerRequest();
 
             container = builder.Build();
 
             return container;
+        }
+    }
+
+    public class Bootstrapper
+    {
+        public static void Run()
+        {
+            AutofacConfig.Initialize(GlobalConfiguration.Configuration);
         }
     }
 }

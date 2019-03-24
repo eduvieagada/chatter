@@ -1,10 +1,7 @@
 ﻿using Chatter.App_Start;
 using Chatter.Logic;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace Chatter.Controllers
@@ -24,7 +21,7 @@ namespace Chatter.Controllers
         {
             try
             {
-                var news = newsContainer.GetLatestNews();
+                var news = newsContainer.GetLatestNews().ToList();
 
                 return Ok(news);
             }

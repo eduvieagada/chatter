@@ -1,13 +1,11 @@
 ﻿using Chatter.Data.Converters;
+using Chatter.Data.Manual.Models;
+using Chatter.Data.Util;
 using Chatter.Logic;
 using Chatter.Logic.Models;
-using NewsAPI;
-using NewsAPI.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace Chatter.Data
 {
@@ -18,19 +16,15 @@ namespace Chatter.Data
         {
             this.apiKey = apiKey;
         }
-        public IEnumerable<INewsItem> GetLatestNews()
+        public List<INewsItem> GetLatestNews()
         {
-            var newsApiClient = new NewsApiClient(apiKey);
+            var client = NewsApiClient.GetClient();
 
-            var topHeadlinesRequest = new TopHeadlinesRequest();
+            var response = client.GetAsync("/v2/top-headlines?sources=techcrunch&apiKey=1ed506b2d88f4400a191fd29778cbbce").Result;
 
-            ArticlesResult result = newsApiClient.GetTopHeadlines(topHeadlinesRequest);
+            var result = response.Content.ReadAsAsync<ArticleList>().Result;
 
-            foreach (Article article in result.Articles)
-            {
-                yield return ArticlesResulttoNewsItemConverter.Convert(article);
-            }
-
+            return result.articles.Select(a => ArticlesResulttoNewsItemConverter.Convert(a)).ToList();
         }
     }
 }

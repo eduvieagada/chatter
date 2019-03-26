@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import Navigation from './components/navigation';
 import Jumbo from "./components/jumbo";
 import Card from "./components/cards";
@@ -28,7 +28,7 @@ class App extends Component {
     render() {
 
         return (
-            <Fragment>
+            <>
                 <Navigation/>
                 <Jumbo news={this.state.news[0]}/>
                 <div className={"card-parent"}>
@@ -39,7 +39,7 @@ class App extends Component {
                 }
                 <Footer/>
                 </div>
-            </Fragment>
+            </>
         );
     }
 }

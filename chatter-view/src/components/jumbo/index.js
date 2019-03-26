@@ -7,7 +7,7 @@ const Jumbo = props => (
         <div className={"jumbo"}>
             <div className={"gradient"}>
                 <p className={"caption"}>{props.news.Title}</p>
-                <span className={"span1"}>{props.news.Author} | {props.news.DatePublished}</span>
+                <span className={"span1"}>{props.news.Author} | {new Date(props.news.DatePublished).toDateString()}</span>
             </div>
             <img src={props.news.ImageUrl} alt={"jumbo"}/>
         </div>

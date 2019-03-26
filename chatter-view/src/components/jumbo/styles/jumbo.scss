@@ -1,9 +1,11 @@
 .jumbo {
   position: absolute;
-  width: 100%;
+  width: 95%;
   height: 500px;
   left: 0;
   top: 130px;
+  margin-left: 44px;
+  border: 1px solid black;
 
   img {
     position: absolute;
@@ -14,11 +16,11 @@
 
   .gradient {
     position: absolute;
-    width: 90.1%;
+    width: 90%;
     height: 64%;
     background-color: rgba(0,0,0,0.3);
     z-index: 2;
-    padding: 90px;
+    padding: 87px 87px 92px;
 
     .span1 {
       position: absolute;
@@ -29,10 +31,12 @@
 
     .caption {
       position: absolute;
-      width: 977px;
+      width: 900px;
       height: 43px;
       left: 16px;
-      top: 300px;
+      top: 330px;
+      text-align: left;
+
 
       color: #FFFFFF;
       font-style: normal;

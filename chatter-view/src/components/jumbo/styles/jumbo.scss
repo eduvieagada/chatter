@@ -1,0 +1,53 @@
+.jumbo {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  left: 0;
+  top: 130px;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .gradient {
+    position: absolute;
+    width: 90.1%;
+    height: 64%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+    padding: 90px;
+
+    .span1 {
+      position: absolute;
+      top: 465px;
+      height: 22px;
+      left: 16px;
+    }
+
+    .caption {
+      position: absolute;
+      width: 977px;
+      height: 43px;
+      left: 16px;
+      top: 300px;
+
+      color: #FFFFFF;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: normal;
+    }
+
+    span {
+      color: #FFFFFF;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
+}
+

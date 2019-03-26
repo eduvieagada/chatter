@@ -3,9 +3,11 @@ using Chatter.Logic;
 using System;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Chatter.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class NewsController : ApiController
     {
         private readonly INewsContainer newsContainer;

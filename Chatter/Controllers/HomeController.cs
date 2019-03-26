@@ -10,7 +10,8 @@ namespace Chatter.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var result = new FilePathResult("~/chatter-view/build/index.html", "text/html");
+            return result;
         }
 
         public ActionResult About()

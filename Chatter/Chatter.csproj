@@ -67,12 +67,21 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -133,9 +142,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Http.WebHost">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
@@ -164,6 +170,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="chatter-view\build\favicon.ico" />
+    <Content Include="chatter-view\build\index.html" />
+    <Content Include="chatter-view\build\precache-manifest.3ef46b16984d63c7a1a25f792b5d6d9f.js" />
+    <Content Include="chatter-view\build\service-worker.js" />
+    <Content Include="chatter-view\build\static\css\main.267e8806.chunk.css" />
+    <Content Include="chatter-view\build\static\js\2.f885ce20.chunk.js" />
+    <Content Include="chatter-view\build\static\js\main.c379c805.chunk.js" />
+    <Content Include="chatter-view\build\static\js\runtime~main.a8a9905a.js" />
+    <Content Include="chatter-view\build\static\media\610741220.0.49174f2f.jpg" />
+    <Content Include="chatter-view\build\static\media\image.2979f5a6.jpg" />
+    <Content Include="chatter-view\public\favicon.ico" />
+    <Content Include="chatter-view\public\index.html" />
+    <Content Include="chatter-view\src\App.css" />
+    <Content Include="chatter-view\src\App.js" />
+    <Content Include="chatter-view\src\App.test.js" />
+    <Content Include="chatter-view\src\components\cards\assets\610741220.0.jpg" />
+    <Content Include="chatter-view\src\components\cards\index.js" />
+    <Content Include="chatter-view\src\components\footer\index.js" />
+    <Content Include="chatter-view\src\components\jumbo\assets\image.jpg" />
+    <Content Include="chatter-view\src\components\jumbo\index.js" />
+    <Content Include="chatter-view\src\components\navigation\assets\search.png" />
+    <Content Include="chatter-view\src\components\navigation\index.js" />
+    <Content Include="chatter-view\src\index.css" />
+    <Content Include="chatter-view\src\index.js" />
+    <Content Include="chatter-view\src\logo.svg" />
+    <Content Include="chatter-view\src\serviceWorker.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -175,6 +207,21 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="log4net.config" />
+    <Content Include="chatter-view\README.md" />
+    <Content Include="chatter-view\package.json" />
+    <Content Include="chatter-view\package-lock.json" />
+    <Content Include="chatter-view\.gitignore" />
+    <Content Include="chatter-view\src\components\cards\styles\cards.scss" />
+    <Content Include="chatter-view\src\components\footer\styles\footer.scss" />
+    <Content Include="chatter-view\src\components\jumbo\styles\jumbo.scss" />
+    <Content Include="chatter-view\src\components\navigation\styles\navigation.scss" />
+    <Content Include="chatter-view\public\manifest.json" />
+    <Content Include="chatter-view\build\asset-manifest.json" />
+    <Content Include="chatter-view\build\manifest.json" />
+    <Content Include="chatter-view\build\static\css\main.267e8806.chunk.css.map" />
+    <Content Include="chatter-view\build\static\js\2.f885ce20.chunk.js.map" />
+    <Content Include="chatter-view\build\static\js\main.c379c805.chunk.js.map" />
+    <Content Include="chatter-view\build\static\js\runtime~main.a8a9905a.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
